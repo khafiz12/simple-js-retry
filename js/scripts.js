@@ -5,21 +5,20 @@
    let apiUrl= "https://pokeapi.co/api/v2/pokemon/?limit=20";
 
     
-        function add(pokemon) {
-        
-          return pokemonList.push(pokemon);
-         } 
+       function add(pokemon) {
+        return pokemonList.push(pokemon);
+        } 
 
        function getAll() {
          return pokemonList;
-         }
+        }
         
-        function showDetails(pokemon) {
+       function showDetails(pokemon) {
            loadDetails(pokemon).then(function(){
             showModal(pokemon); 
          }
           ); 
-           }
+        }
 
        function addListItem(pokemon){
          let pokemonList = document.querySelector(".pokemon-list");
@@ -33,7 +32,7 @@
          showDetails(pokemon)
          }
           );
-           }
+        }
 
          function loadList() {
          return fetch(apiUrl).then(function(response)
@@ -45,7 +44,7 @@
           
          add(pokemon);
          });}).catch(function(e){console.error(e);})
-       }
+        }
             
          function loadDetails(pokemon) {
          let url= pokemon.detailsUrl;
@@ -87,28 +86,25 @@
         modalContainer.appendChild(modal);
 
         modalContainer.classList.add("is-visible");
+        
+        window.addEventListener("keydown", (e) =>{
+        let modalContainer = document.querySelector("#modal-container");
+        if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) 
+        {hideModal()};
+     
+        modalContainer.addEventListener("click",(e)=>{
+        let target = e.target;
+        if (target === modalContainer) {hideModal();} 
+         })
+           })
+
        } 
 
        function hideModal() {
        let modalContainer= document.querySelector("#modal-container");
        modalContainer.classList.remove("is-visible");
-
-       window.addEventListener("keydown", (e) =>{
-       let modalContainer = document.querySelector("#modal-container");
-       if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) 
-       {hideModal()};
-
-       modalContainer.addEventListener("click",(e)=>{
-       let target = e.target;
-       if (target === modalContainer) {hideModal();} 
-       })
-        })
-         }
-      
-      
        
-       
-
+       }
 
        return {
        add: add,
@@ -122,9 +118,7 @@
 
        })();
 
-     //console.log(pokemonReprository.getAll());
-     //pokemonReprository.add ({name: "smart", type: "gas" ,height: 15});
-     //console.log(pokemonReprository.getAll());
+     
      
      
      pokemonReprository.loadList().then(function () {
