@@ -14,7 +14,7 @@
         }
         
        function showDetails(pokemon) {
-           loadDetails(pokemon).then(function(){
+            loadDetails(pokemon).then(function(){
             showModal(pokemon); 
          }
           ); 
@@ -22,12 +22,15 @@
 
        function addListItem(pokemon){
          let pokemonList = document.querySelector(".pokemon-list");
+         pokemonList.classList.add("list-item");
          let listPokemon = document.createElement("li");
+         listPokemon.classList.add("list-group-item");
          let button = document.createElement("button");
+         button.classList.add("btn-primary")
+         button.classList.add("btn-lg");
          button.innerText = pokemon.name;
-         button.classList.add("button-class");
-         listPokemon.appendChild(button);
          pokemonList.appendChild(listPokemon);
+         listPokemon.appendChild(button);
          button.addEventListener( "click", function () {
          showDetails(pokemon)
          }
@@ -58,16 +61,16 @@
 
         function showModal(pokemon) {
         
-        let modalContainer= document.querySelector("#modal-container"); 
-         modalContainer.innerHTML='';
-        
-        let modal=document.createElement("div");
-        modal.classList.add("modal");
-        
-        let closeButtonElement= document.createElement("button");
-        closeButtonElement.classList.add("modal-close");
-        closeButtonElement.innerText= "Close";
-        closeButtonElement.addEventListener("click",hideModal);
+        let modalBody= document.querySelector(".modal-body");
+        let modalTitle = document.querySelector(".modal-title");
+        let modalHeader = document.querySelector(".modal-header");   
+         
+        modalTitle.empty();
+        modalBody.empty();
+        modalHeader.empty();
+        // mute modalContainer for now. test to see if task 1.10 work
+        //let modalContainer= document.querySelector("#modal-container"); 
+        //modalContainer.innerHTML=''
 
         let titleElement=document.createElement("h1");
         titleElement.innerText= pokemon.name;
@@ -77,13 +80,13 @@
 
         let imageElement = document.createElement("img");
         imageElement.src = pokemon.imageUrl; 
-
         
-        modal.appendChild(closeButtonElement);
-        modal.appendChild(titleElement);
-        modal.appendChild(contentElement);
-        modal.appendChild(imageElement);
-        modalContainer.appendChild(modal);
+        modalTitle.appendChild(titleElement);
+        modalBody.appendChild(contentElement);
+        modalBody.appendChild(imageElement);
+        //need to add the body class missing in the HTML. maybe the reason why things arent working.//
+        //modalContainer.appendChild(modalBody);
+                    
 
         modalContainer.classList.add("is-visible");
         

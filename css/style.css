@@ -20,20 +20,7 @@
     display: none;
   }
 
-  .modal-close {
-    float: right;
-    border: 0;
-    background: none;
-    color: black;
-    text-decoration: underline;}
 
-    .modal{ 
-    margin:auto;
-    background:#fff;
-    padding:24px;
-    width:100%;
-    max-width: 600px;
-     }
   
   #modal-container.is-visible {
     position: fixed;
