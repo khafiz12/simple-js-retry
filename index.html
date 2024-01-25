@@ -11,16 +11,25 @@
 </head>
 <body>
    
-  <ul class="list-group"> 
-  <div class=" row pokemon-list"></div> 
-   <li  class="list-group-item col-12 col-sm-6 col-md-4 col-xl-3" ></li>
-  </ul>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">PokeDex</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  
+
+<!--  <ul class="list-group">  -->
+  <div class="pokemon-list"></div> 
+<!--   <li  class="list-group-item col-12 col-sm-6 col-md-4 col-xl-3" ></li> -->
+ <!--  </ul> -->
  <!-- <div id= "modal-container"></div> -->
 
 
-  <button type="button" id="launch-button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <!--<button type="button" id="launch-button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
-  </button>
+  </button> -->
   
 <!-- Modal -->
 <!-- added the bootstrap modal/need to build on this-->
@@ -28,7 +37,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modal Pokedex</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
