@@ -7,47 +7,59 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="js/scripts.js"> 
     <link rel="stylesheet" href="css/style.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 
 </head>
 <body>
    
+  <!--Nav bar for pokemon list-->
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand">PokeDex</a>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <div class="sr-only">Pokemon search box  </div>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <div class="sr-only"> Search button</div>
     </form>
   </nav>
-  
+   
+  <!-- pokemon list code-->
+    <div class="container page-container">
+    <ul class="list-group list-unstyled" >
+      <div class="pokemon-list"></div>
+      <div class="sr-only">This is a list of pokemons</div>
+    </ul>
+    </div>
 
-<!--  <ul class="list-group">  -->
-  <div class="pokemon-list"></div> 
-<!--   <li  class="list-group-item col-12 col-sm-6 col-md-4 col-xl-3" ></li> -->
- <!--  </ul> -->
- <!-- <div id= "modal-container"></div> -->
-
-
-  <!--<button type="button" id="launch-button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <!--Pokemon launch button code-->
+  <button type="button" id="launch-button" class="btn btn-secondar" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
-  </button> -->
+    <div class="sr-only">Launch pokemon modal button</div>
+  </button> 
   
-<!-- Modal -->
-<!-- added the bootstrap modal/need to build on this-->
+<!-- Modal code -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+         <div class="sr-only"> Pokemon modal header</div>
         <h5 class="modal-title" id="exampleModalLabel">Modal Pokedex</h5>
+           <div class="sr-only">Pokemon modal</div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <div class="sr-only">close button for pokemon modal </div>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       
+       <div class="sr-only"> Pokemon modal that contains pokemon</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <div class="sr-only"> Pokemon modal close button </div>
         <button type="button" class="btn btn-primary">Save changes</button>
+           <div class="sr-only">Pokemon modal save changes </div>
       </div>
     </div>
   </div>

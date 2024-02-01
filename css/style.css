@@ -1,3 +1,5 @@
+
+
 .button-class {
     background-color: #4caf50; /* Green */
     border: none;
@@ -15,10 +17,45 @@
     color: black;
     border: 2px solid #4caf50;
 }
+.screen{
+background-color: black;
+}
 
 #modal-container {
     display: none;
   }
+
+/*css code for modal with bootstrap*/
+  body{
+    background: grey;
+    font-family:  sans-serif; 
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+    h1{
+    text-align: center;
+    color: red;
+
+  }
+
+  img{
+     max-width: 200%;
+     max-height: 200%;
+     width: 50%;
+     display: flex;
+     align-items: center;
+     
+  }
+   
+  .page-container{
+    margin-top: 50px;
+  }
+
+  
+
+
+
 
 
   
