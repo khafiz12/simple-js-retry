@@ -1,6 +1,4 @@
 
-
-
 /*css code for modal with bootstrap*/
   body{
     background: grey;
@@ -34,27 +32,7 @@
 
 
 
-  
-  #modal-container.is-visible {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-      
-    /* to show it above other content */
-    z-index: 999; 
-  
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-  
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center; }
+
   
 
 

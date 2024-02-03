@@ -1,6 +1,5 @@
-   
-   
-   let pokemonReprository = (function() {
+   /* stylelint-disable */
+   let pokemonReprository= (function() {
    let pokemonList= [];
    let apiUrl= "https://pokeapi.co/api/v2/pokemon/?limit=100";
 
@@ -17,6 +16,7 @@
             loadDetails(pokemon).then(function(){
             showModal(pokemon); 
          }
+         
           ); 
            }
 
@@ -111,3 +111,4 @@
       });
        });
 
+/* stylelint-enable */
